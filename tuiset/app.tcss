@@ -1,0 +1,6 @@
+TabPane { padding: 1 2; }
+#header { height: auto; margin-bottom: 1; text-style: bold; }
+#display { height: 3; content-align: left middle; }
+OptionList { height: 1fr; border: solid $primary-lighten-2; }
+PasswordScreen, ConfirmScreen { align: center middle; }
+#dialog { width: 50; max-width: 100%; height: auto; padding: 1 2; border: solid $accent; background: $surface; }

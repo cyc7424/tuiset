@@ -1,0 +1,28 @@
+[project]
+name = "tuiset"
+version = "0.1.0"
+description = "TUI control panel for Linux: WiFi, Bluetooth, brightness, volume"
+requires-python = ">=3.11"
+license = "MIT"
+license-files = ["LICENSE"]
+dependencies = ["textual>=0.80"]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-asyncio"]
+
+[project.scripts]
+tuiset = "tuiset.app:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["tuiset*"]
+
+[tool.setuptools.package-data]
+tuiset = ["*.tcss"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
